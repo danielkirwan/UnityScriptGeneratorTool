@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/DangryGames/Generator/Editor/EditorWindow/GeneratorEditor.uss?fileID=7433441132597879392&amp;guid=2ab891f15764e14449e3a86c8e281336&amp;type=3#GeneratorEditor" />
+    <ui:VisualElement name="MainContainer" class="mainContainer" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; min-height: 600px; background-color: rgb(0, 0, 0); width: 478px;">
+        <ui:VisualElement name="ScriptTypeContainer" class="container" style="flex-direction: row; flex-wrap: wrap; justify-content: space-around; background-color: rgb(0, 0, 0);">
+            <ui:DropdownField label="ScriptType:" index="4" choices="Class, Interface, Scriptable Object, Base" name="scriptTypeDropdown" tooltip="Choose the type of script you want to create" class="lblRowField" style="font-size: 15px; display: none;" />
+            <ui:Button text="Mono" display-tooltip-when-elided="true" name="monoBtn" class="typeBtn" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);" />
+            <ui:Button text="Blank&#10;Class" display-tooltip-when-elided="true" name="classBtn" focusable="true" class="typeBtn" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);" />
+            <ui:Button text="Derived" display-tooltip-when-elided="true" name="derivedBtn" class="typeBtn" style="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0);" />
+            <ui:Button text="Interface" display-tooltip-when-elided="true" name="interfaceBtn" class="typeBtn" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);" />
+            <ui:Button text="Scriptable&#10;Object" display-tooltip-when-elided="true" name="soBtn" class="typeBtn" style="background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="SOContainer" class="container txtHidden" style="flex-direction: row; flex-wrap: wrap; justify-content: space-around; background-color: rgb(0, 0, 0); display: none;">
+            <ui:TextField picking-mode="Ignore" label="SO Filename" name="soFilename" tooltip="Scriptable Object filename" class="txtField" style="margin-bottom: 5px;" />
+            <ui:TextField picking-mode="Ignore" label="SO Menuname" name="soMenuname" tooltip="Scriptable object menu name" class="txtField" style="margin-bottom: 5px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="DerivedContainer" class="container" style="flex-direction: row; flex-wrap: wrap; justify-content: space-around; background-color: rgb(0, 0, 0); display: none;">
+            <uie:ObjectField label="Parent Class Name" name="childName" class="txtField" style="display: flex;" />
+            <ui:Toggle label="Contructor" name="ctor" tooltip="Does the class need a constructor?" value="false" style="width: 100%; -unity-text-align: upper-left; margin-left: 6px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ScriptNameContainer" class="container" style="background-color: rgb(0, 0, 0);">
+            <ui:TextField picking-mode="Ignore" label="Script Name: " text="NewScript" name="txtScriptName" tooltip="Enter the name of the new script" class="txtField" style="font-size: 15px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="PathContainer" class="container" style="background-color: rgb(0, 0, 0);">
+            <ui:TextField picking-mode="Ignore" label="Path Name: " text="Assets/Scripts" name="pathName" tooltip="The Root Folder Needs to start with Assets/" value="Assets/Scripts" class="txtField" style="font-size: 15px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="CreateFolderContainer" class="container txtHidden" style="background-color: rgb(0, 0, 0);">
+            <ui:Toggle label="Folder Name" name="toggleNewFolder" tooltip="Select Toggle to add folder name" value="false" />
+            <ui:TextField picking-mode="Ignore" label="Folder Name" name="folderName" class="txtHidden" style="margin-bottom: 5px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="NameSpaceContainer" class="container" style="background-color: rgb(0, 0, 0);">
+            <ui:Toggle label="Namespace:" name="toggleNameSpace" tooltip="Select Toggle to add a namespace to the script" value="false" />
+            <ui:TextField picking-mode="Ignore" label="Namespace" name="nameSpace" class="txtHidden" style="margin-bottom: 5px;" />
+        </ui:VisualElement>
+        <ui:Button text="Create Folder &amp; File" display-tooltip-when-elided="true" name="testBtn" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); height: 50px; font-size: 15px;" />
+        <ui:Label text="No folder of that name exists in path name" display-tooltip-when-elided="true" name="warningLbl" class="txtHidden" style="font-size: 20px; color: rgb(255, 0, 0); -unity-text-align: upper-center; margin-top: 20px;" />
+        <ui:VisualElement name="ImageContainer" class="container" style="height: 100px; background-image: url(&apos;project://database/Assets/DangryGames/Generator/Editor/EditorWindow/logo.png?fileID=2800000&amp;guid=55c4bf76dcf2e75448e44282ed0e8c6f&amp;type=3#logo&apos;); width: 50%; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); -unity-background-image-tint-color: rgb(0, 0, 0);" />
+    </ui:VisualElement>
+</ui:UXML>
