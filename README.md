@@ -1,10 +1,39 @@
-# UnityScriptGeneratorTool
+# Unity Script Generator Tool
 
-This tool was created to improve the creation of C# scripts inside of the Unity game engine. 
+![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![Editor Tool](https://img.shields.io/badge/Unity-Editor%20Tool-blue?style=for-the-badge)
+![Productivity](https://img.shields.io/badge/Focus-Workflow%20Speed-orange?style=for-the-badge)
 
-The main focus of this is that you can create derived classes with the parent class attached. 
-The other main benefit of the tool is so that you can create scriptable objects and not have to manually create all the extra bits you need to make sure it is usable. Usually you would need to create a C# script first and then edit the script, but with this tool you can do it all in the editor window.
+A **Unity Editor script generator** that creates C# scripts from reusable templates, helping teams enforce **consistent structure**, **naming**, and **boilerplate** while speeding up iteration.
 
-Let me know any features you would like in the tool and feel free to update the respository with updates.
+---
 
-Happy coding.
+## ✨ Features
+
+- Generate C# scripts directly inside the Unity Editor
+- Template-based script creation
+- Automatic class name replacement
+- Optional namespace injection
+- Supports custom output folders
+- Reduces repetitive boilerplate code
+- Designed for scalable team workflows
+
+---
+
+## 📄 Overview
+
+The Unity Script Generator Tool is designed for projects where:
+
+- Scripts follow repeatable patterns
+- Naming conventions matter
+- Boilerplate slows down iteration
+- Consistency across systems is important
+
+Instead of duplicating files or copy–pasting old scripts, this tool allows you to define **script templates** and generate new scripts with a few clicks.
+
+---
+
+## 📦 Installation
+
+1. Copy the entire folder into your Unity project:
